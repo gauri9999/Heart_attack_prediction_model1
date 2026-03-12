@@ -40,9 +40,9 @@ if st.button("Predict"):
         "Troponin":[Troponin]
     })
 
-    if prediction[1] == 0:
+   if prediction[1] == 0:
         st.error("High Risk of Heart Attack")
-    else:
+   else:
         st.success("Low Risk of Heart Attack")
 
 
