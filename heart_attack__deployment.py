@@ -38,6 +38,8 @@ if st.button("Predict"):
         "CK-MB":[CK_MB],
         "Troponin":[Troponin]
     })
+      prediction = model.predict(df)
+
 
 
 
