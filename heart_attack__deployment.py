@@ -34,7 +34,7 @@ if st.button("Predict"):
         "Gender":[Gender],
         "Heart rate":[Heart_rate],
         "Systolic blood pressure":[Systolic_BP],
-        "Diastolic blood pressure":[Diastolic_BP],
+        "Diastolic blood pressure":[Diastolic_blood_presssure"]
         "Blood sugar":[Blood_sugar],
         "CK-MB":[CK_MB],
         "Troponin":[Troponin]
