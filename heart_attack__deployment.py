@@ -38,6 +38,6 @@ df = pd.DataFrame({
 })
 
 if st.button("Predict"):
-   prediction = model.predict(df)
+
 
 
