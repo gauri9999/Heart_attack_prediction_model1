@@ -40,6 +40,4 @@ df = pd.DataFrame({
 if st.button("Predict"):
    prediction = model.predict(df)
 
-if result[0] == "positive":
-        st.error("High Risk of Heart Attack")
 
