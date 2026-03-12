@@ -40,7 +40,6 @@ if st.button("Predict"):
     })
 
     prediction = model.predict(df)
-
     if prediction[0] == 1:
         st.error("High Risk of Heart Attack")
     else:
