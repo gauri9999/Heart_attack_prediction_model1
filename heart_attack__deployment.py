@@ -38,8 +38,12 @@ if st.button("Predict"):
         "CK-MB":[CK_MB],
         "Troponin":[Troponin]
     })
-      prediction = model.predict(df)
+   prediction = model.predict(df)
 
+    if prediction[1] == 0:
+        st.error("High Risk of Heart Attack")
+    else:
+        st.success("Low Risk of Heart Attack")
 
 
 
