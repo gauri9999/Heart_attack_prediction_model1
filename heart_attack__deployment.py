@@ -39,10 +39,9 @@ if st.button("Predict"):
         "Troponin":[Troponin]
     })
 
-    prediction = model.predict(df)
-    result = encoder.inverse_transform(prediction)
+   prediction = model.predict(df)
 
-    if result[0] == "positive":
+    if prediction[0] == 1:
         st.error("High Risk of Heart Attack")
     else:
-        st.success("Low Risk of Heart Attack")
+        st.success("Low Risk of Heart Attack"
