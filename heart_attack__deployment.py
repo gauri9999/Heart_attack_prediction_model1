@@ -26,7 +26,6 @@ Blood_sugar = st.number_input("Blood Sugar")
 CK_MB = st.number_input("CK-MB")
 Troponin = st.number_input("Troponin")
 
-if st.button("Predict"):
 
     df = pd.DataFrame({
         "Age":[Age],
@@ -38,9 +37,10 @@ if st.button("Predict"):
         "CK-MB":[CK_MB],
         "Troponin":[Troponin]
     })
-   prediction = model.predict(df)
 
-    if prediction[1] == 0:
+if st.button("Predict"):
+    prediction = model.predict(df)
+    if prediction[0] == 1:
         st.error("High Risk of Heart Attack")
     else:
         st.success("Low Risk of Heart Attack")
