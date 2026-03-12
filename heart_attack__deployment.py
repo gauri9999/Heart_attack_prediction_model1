@@ -39,7 +39,6 @@ df = pd.DataFrame({
 
 if st.button("Predict"):
    prediction = model.predict(df)
-    result = encoder.inverse_transform(prediction)
 
     if result[0] == "positive":
         st.error("High Risk of Heart Attack")
