@@ -12,7 +12,7 @@ import pandas as pd
 import joblib
 
 # Load model and encoder
-
+model = joblib.load("Heart_attack_prediction_model.pkl")
 encoder = joblib.load("label_encoder_Heart.pkl")
 
 st.title("Heart Attack Prediction System")
@@ -26,18 +26,23 @@ Blood_sugar = st.number_input("Blood Sugar")
 CK_MB = st.number_input("CK-MB")
 Troponin = st.number_input("Troponin")
 
-df = pd.DataFrame({
-    "Age":[Age],
-    "Gender":[Gender],
-    "Heart rate":[Heart_rate],
-    "Systolic blood pressure":[Systolic_BP],
-    "Diastolic blood pressure":[Diastolic_BP],
-    "Blood sugar":[Blood_sugar],
-    "CK-MB":[CK_MB],
-    "Troponin":[Troponin]
-})
+if st.button("Predict"):
 
-    if st.button("Predict"):
+    df = pd.DataFrame({
+        "Age":[Age],
+        "Gender":[Gender],
+        "Heart rate":[Heart_rate],
+        "Systolic blood pressure":[Systolic_BP],
+        "Diastolic blood pressure":[Diastolic_BP],
+        "Blood sugar":[Blood_sugar],
+        "CK-MB":[CK_MB],
+        "Troponin":[Troponin]
+    })
 
+    prediction = model.predict(df)
+    result = encoder.inverse_transform(prediction)
 
-
+    if result[0] == "positive":
+        st.error("High Risk of Heart Attack")
+    else:
+        st.success("Low Risk of Heart Attack")
