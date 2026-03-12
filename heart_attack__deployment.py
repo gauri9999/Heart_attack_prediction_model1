@@ -39,7 +39,7 @@ if st.button("Predict"):
         "Troponin":[Troponin]
     })
 
-    prediction = model.predict(df)
+
     if prediction[0] == 1:
         st.error("High Risk of Heart Attack")
     else:
