@@ -21,7 +21,7 @@ st.title("Heart Attack Prediction System")
 
 Age = st.number_input("Age")
 Gender = st.number_input("Gender (0=Female,1=Male)")
-Heart rate = st.number_input("Heart Rate")
+Heart rate = st.number_input("Heart rate")
 Systolic blood pressure = st.number_input("Systolic blood pressure")
 Diastolic blood pressure = st.number_input("Diastolic Blood Pressure")
 Blood sugar = st.number_input("Blood Sugar")
@@ -34,8 +34,8 @@ if st.button("Predict"):
         "Age":[Age],
         "Gender":[Gender],
         "Heart rate":[Heart rate],
-        "Systolic_blood_pressure":[Systolic blood pressure],
-        "Diastolic_blood_pressure":[Diastolic blood pressure],
+        "Systolic blood pressure":[Systolic blood pressure],
+        "Diastolic blood pressure":[Diastolic blood pressure],
         "Blood sugar":[Blood sugar],
         "CK-MB":[CK-MB],
         "Troponin":[Troponin]
