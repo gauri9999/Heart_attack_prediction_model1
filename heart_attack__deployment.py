@@ -17,15 +17,15 @@ encoder = joblib.load("label_encoder_Heart.pkl")
 
 st.title("Heart Attack Prediction System")
 
+
 Age = st.number_input("Age")
 Gender = st.number_input("Gender (0=Female,1=Male)")
 Heart_rate = st.number_input("Heart Rate")
 Systolic_blood_pressure = st.number_input("Systolic blood pressure")
-Diastolic_BP = st.number_input("Diastolic Blood Pressure")
+Diastolic_blood_pressure = st.number_input("Diastolic Blood Pressure")
 Blood_sugar = st.number_input("Blood Sugar")
 CK_MB = st.number_input("CK-MB")
 Troponin = st.number_input("Troponin")
-
 
 if st.button("Predict"):
 
@@ -33,8 +33,8 @@ if st.button("Predict"):
         "Age":[Age],
         "Gender":[Gender],
         "Heart rate":[Heart_rate],
-        "Systolic blood pressure":[Systolic_BP],
-        "Diastolic blood pressure":[Diastolic_blood_presssure"]
+        "Systolic blood pressure":[Systolic_blood_pressure],
+        "Diastolic blood pressure":[Diastolic_blood_pressure],
         "Blood sugar":[Blood_sugar],
         "CK-MB":[CK_MB],
         "Troponin":[Troponin]
@@ -45,7 +45,7 @@ if st.button("Predict"):
     if prediction[0] == 1:
         st.error("High Risk of Heart Attack")
     else:
-        st.success("Low Risk of Heart Attack")
+
 
 
 
