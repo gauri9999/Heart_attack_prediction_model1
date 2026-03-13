@@ -12,7 +12,7 @@ import pandas as pd
 import joblib
 
 # Load model and encoder
-model = joblib.load("heart_attack_model.pkl")
+model = joblib.load("heart_attack_prediction_model.pkl")
 encoder = joblib.load("label_encoder_Heart.pkl")
 
 st.title("Heart Attack Prediction System")
