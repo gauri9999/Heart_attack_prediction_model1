@@ -25,7 +25,7 @@ Heart_rate = st.number_input("Heart Rate")
 Systolic_blood_pressure = st.number_input("Systolic_blood_pressure")
 Diastolic_blood_pressure = st.number_input("Diastolic_Blood_Pressure")
 Blood_sugar = st.number_input("Blood Sugar")
-CK_MB = st.number_input("CK-MB")
+CK-MB = st.number_input("CK-MB")
 Troponin = st.number_input("Troponin")
 
 if st.button("Predict"):
