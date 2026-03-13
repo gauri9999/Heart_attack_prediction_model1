@@ -21,10 +21,10 @@ st.title("Heart Attack Prediction System")
 
 Age = st.number_input("Age")
 Gender = st.number_input("Gender (0=Female,1=Male)")
-Heart_rate = st.number_input("Heart Rate")
-Systolic_blood_pressure = st.number_input("Systolic_blood_pressure")
-Diastolic_blood_pressure = st.number_input("Diastolic_Blood_Pressure")
-Blood_sugar = st.number_input("Blood Sugar")
+Heart rate = st.number_input("Heart Rate")
+Systolic blood pressure = st.number_input("Systolic blood pressure")
+Diastolic blood pressure = st.number_input("Diastolic Blood Pressure")
+Blood sugar = st.number_input("Blood Sugar")
 CK-MB = st.number_input("CK-MB")
 Troponin = st.number_input("Troponin")
 
@@ -33,11 +33,11 @@ if st.button("Predict"):
     df = pd.DataFrame({
         "Age":[Age],
         "Gender":[Gender],
-        "Heart rate":[Heart_rate],
-        "Systolic_blood_pressure":[Systolic_blood_pressure],
-        "Diastolic_blood_pressure":[Diastolic_blood_pressure],
-        "Blood_sugar":[Blood_sugar],
-        "CK-MB":[CK_MB],
+        "Heart rate":[Heart rate],
+        "Systolic_blood_pressure":[Systolic blood pressure],
+        "Diastolic_blood_pressure":[Diastolic blood pressure],
+        "Blood sugar":[Blood sugar],
+        "CK-MB":[CK-MB],
         "Troponin":[Troponin]
     })
 
